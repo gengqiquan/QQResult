@@ -1,4 +1,4 @@
-# RxActivityResult
+# QQResult
  Obtain results intent from startActivityForResult() to be callback.
  
  Use fragemnt as proxy
