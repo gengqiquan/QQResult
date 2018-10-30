@@ -4,10 +4,6 @@ package com.gengqiquan.qqresult;
 import android.content.Intent;
 
 class Request {
-    public Request() {
-    }
-
-
     protected void post(int resultCode, Intent data) {
         observer.update(resultCode, data);
     }
@@ -25,11 +21,6 @@ class Request {
     }
 
     Intent intent;
-
-    public Intent getIntent() {
-        return intent;
-    }
-
 }
 
 

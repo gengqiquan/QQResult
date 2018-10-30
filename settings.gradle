@@ -1,1 +1,1 @@
-include ':app', ':gqqresult'
+include ':app', ':QQresult', ':RxResultAdapter'

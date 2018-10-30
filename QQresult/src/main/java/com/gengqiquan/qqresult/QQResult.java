@@ -114,5 +114,9 @@ public class QQResult {
             data.putAll(bundle);
             return this;
         }
+
+        public <T> T transform(IResultAdapter<T> adapter) {
+            return adapter.adapter(this);
+        }
     }
 }

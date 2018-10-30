@@ -21,7 +21,7 @@
                              });
 ```
 
-### use in kotlin with anko
+### use in kotlin
 call in activity or fragment
 ```
  startActivityWith<ThirdActivity>(
@@ -36,3 +36,41 @@ call in activity or fragment
 compile 'com.gengqiquan:QQResult:0.0.1'
 ```
 
+# Transform
+java
+```
+ QQResult.startActivityWith(MainActivity.this, SecondActivity.class)
+                        .putString("key", "笑一个")
+                        .transform(RxResultAdapterFactory.create())
+                        .subscribe(new Subscriber<Intent>() {
+                            @Override
+                            public void onCompleted() {
+
+                            }
+
+                            @Override
+                            public void onError(Throwable e) {
+
+                            }
+
+                            @Override
+                            public void onNext(Intent intent) {
+                                tv.setText(intent.getStringExtra("msg"));
+                            }
+                        });
+```
+kotlin
+```
+     startActivityWith<ThirdActivity>(
+                "key" to "哭一个", "number" to 100
+            )
+                .toObservable()
+                .subscribe({
+                Toast.makeText(this@SecondActivity, it.getStringExtra("msg"), Toast.LENGTH_SHORT).show()
+                })
+
+```
+## gradle
+```
+compile 'com.gengqiquan:result-adapter-rxjava:0.0.2'
+```

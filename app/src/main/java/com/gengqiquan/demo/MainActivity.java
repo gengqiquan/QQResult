@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.TextView;
 import com.gengqiquan.qqresult.IResult;
 import com.gengqiquan.qqresult.QQResult;
+import com.gengqiquan.rxresultadapter.RxResultAdapterFactory;
+import rx.Subscriber;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -22,24 +24,37 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 QQResult.startActivityWith(MainActivity.this, SecondActivity.class)
                         .putString("key", "笑一个")
-                        .result(new IResult() {
+                        .transform(RxResultAdapterFactory.create())
+                        .subscribe(new Subscriber<Intent>() {
                             @Override
-                            public void result(Intent intent) {
+                            public void onCompleted() {
+
+                            }
+
+                            @Override
+                            public void onError(Throwable e) {
+
+                            }
+
+                            @Override
+                            public void onNext(Intent intent) {
                                 tv.setText(intent.getStringExtra("msg"));
                             }
-
-                            @Override
-                            public void cancel() {
-
-                            }
                         });
+
+//                        .result(new IResult() {
+//                            @Override
+//                            public void result(Intent intent) {
+//                                tv.setText(intent.getStringExtra("msg"));
+//                            }
+//
+//                            @Override
+//                            public void cancel() {
+//
+//                            }
+//                        });
             }
         });
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.d("onDestroy", this.getClass().getName());
-    }
 }

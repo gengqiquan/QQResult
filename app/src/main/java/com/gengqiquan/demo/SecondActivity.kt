@@ -21,7 +21,11 @@ class SecondActivity : Activity() {
         jump.setOnClickListener {
             startActivityWith<ThirdActivity>(
                 "key" to "哭一个", "number" to 100
-            ).result({
+            )
+//                .toObservable()
+//                .subscribe({Toast.makeText(this@SecondActivity, it.getStringExtra("msg"), Toast.LENGTH_SHORT).show()})
+
+                .result({
                 Toast.makeText(this@SecondActivity, it.getStringExtra("msg"), Toast.LENGTH_SHORT).show()
             })
         }
