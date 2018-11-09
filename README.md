@@ -33,7 +33,11 @@ call in activity or fragment
 
 ## gradle
 ```
+<<<<<<< HEAD
 compile 'com.gengqiquan:QQResult:0.0.3'
+=======
+compile 'com.gengqiquan:QQResult:0.0.2'
+>>>>>>> d7887b81921dfeb50e7b9901dbd1e78548c5a6ef
 ```
 
 # Transform
