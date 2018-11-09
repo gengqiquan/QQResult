@@ -16,7 +16,7 @@ inline fun <reified T : Activity> Fragment.startActivityWith(
     vararg params: Pair<String, Any>
 ) = QQResult.startActivityWith(this.context, T::class.java).putAll(Bundle().pair(params))
 
-inline fun <reified T : Activity> QQResult.startActivityWith(
+inline fun <reified T : Activity> startActivityWith(
     context: Context, vararg params: Pair<String, Any?>
 ): QQResult.Builder = QQResult.startActivityWith(context, T::class.java).putAll(Bundle().pair(params))
 

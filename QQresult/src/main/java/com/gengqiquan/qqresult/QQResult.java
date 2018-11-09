@@ -13,7 +13,9 @@ import android.support.annotation.NonNull;
  * @author gengqiquan
  * @date 2018/10/17 下午3:29
  */
- public class QQResult {
+public class QQResult {
+    private QQResult() {
+    }
 
     public static Builder startActivityWith(Context context, Class cls) {
         if (!(context instanceof Activity))
