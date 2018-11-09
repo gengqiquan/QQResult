@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 QQResult.startActivityWith(MainActivity.this, SecondActivity.class)
-                        .putString("key", "笑一个")
+                        .put("key", "笑一个")
                         .transform(RxResultAdapterFactory.create())
                         .subscribe(new Subscriber<Intent>() {
                             @Override

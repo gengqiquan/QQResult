@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.gengqiquan.qqresult.startActivityWith
 import kotlinx.android.synthetic.main.activity_main2.*
 
 class SecondActivity : Activity() {
@@ -26,8 +27,8 @@ class SecondActivity : Activity() {
 //                .subscribe({Toast.makeText(this@SecondActivity, it.getStringExtra("msg"), Toast.LENGTH_SHORT).show()})
 
                 .result({
-                Toast.makeText(this@SecondActivity, it.getStringExtra("msg"), Toast.LENGTH_SHORT).show()
-            })
+                    Toast.makeText(this@SecondActivity, it.getStringExtra("msg"), Toast.LENGTH_SHORT).show()
+                })
         }
     }
 

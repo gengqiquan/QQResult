@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-
 /**
  * Created by gengqiquan on 2018/10/10.
  */
@@ -14,7 +13,7 @@ import android.support.annotation.NonNull;
  * @author gengqiquan
  * @date 2018/10/17 下午3:29
  */
-public class QQResult {
+ public class QQResult {
 
     public static Builder startActivityWith(Context context, Class cls) {
         if (!(context instanceof Activity))
@@ -39,6 +38,9 @@ public class QQResult {
             intent = i;
         }
 
+        public <T> T transform(IResultAdapter<T> adapter) {
+            return adapter.adapter(this);
+        }
 
         public void result(@NonNull Func1 func1) {
             result(new ResultProxy(func1, new Func2() {
@@ -80,33 +82,8 @@ public class QQResult {
                     .commitAllowingStateLoss();
         }
 
-        public Builder putBoolean(String key, boolean value) {
-            data.putBoolean(key, value);
-            return this;
-        }
-
-        public Builder putInt(String key, int value) {
-            data.putInt(key, value);
-            return this;
-        }
-
-        public Builder putLong(String key, long value) {
-            data.putLong(key, value);
-            return this;
-        }
-
-        public Builder putDouble(String key, double value) {
-            data.putDouble(key, value);
-            return this;
-        }
-
-        public Builder putString(String key, String value) {
-            data.putString(key, value);
-            return this;
-        }
-
-        public Builder putBundle(String key, Bundle value) {
-            data.putBundle(key, value);
+        public Builder put(String key, Object value) {
+            ResultKt.put(data, key, value);
             return this;
         }
 
@@ -115,8 +92,6 @@ public class QQResult {
             return this;
         }
 
-        public <T> T transform(IResultAdapter<T> adapter) {
-            return adapter.adapter(this);
-        }
+
     }
 }
