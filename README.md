@@ -3,7 +3,7 @@
  
  Use fragemnt as proxy
 
-[![GitHub experimental release version](https://img.shields.io/github/release/gengqiquan/QQResult/all.svg?label=Experimental&maxAge=600)](https://github.com/gengqiquan/QQResult/releases)
+[![GitHub QQResult release version](https://img.shields.io/github/release/gengqiquan/QQResult/all.svg?label=QQResult&maxAge=600)](https://github.com/gengqiquan/QQResult/releases)
 
 ## use in java 
 ```
