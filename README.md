@@ -1,9 +1,8 @@
-# QQResult
+[![GitHub QQResult release version](https://img.shields.io/github/release/gengqiquan/QQResult/all.svg?label=QQResult&maxAge=600)](https://github.com/gengqiquan/QQResult/releases)
+
  Obtain results intent from startActivityForResult() to be callback.
  
  Use fragemnt as proxy
-
-[![GitHub QQResult release version](https://img.shields.io/github/release/gengqiquan/QQResult/all.svg?label=QQResult&maxAge=600)](https://github.com/gengqiquan/QQResult/releases)
 
 ## use in java 
 ```
