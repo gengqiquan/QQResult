@@ -1,5 +1,5 @@
 [![GitHub QQResult release version](https://img.shields.io/github/release/gengqiquan/QQResult/all.svg?label=QQResult&maxAge=600)](https://github.com/gengqiquan/QQResult/releases) 
-[![License](https://img.shields.io/github/license/gengqiquan/QQResult.svg?label=License&maxAge=2592000)]
+[![License](https://img.shields.io/github/license/gengqiquan/QQResult.svg?label=License&maxAge=2592000)](https://github.com/gengqiquan/QQResult/blob/master/LICENSE)
 
  Obtain results intent from startActivityForResult() to be callback.
  
