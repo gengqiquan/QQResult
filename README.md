@@ -35,7 +35,7 @@ call in activity or fragment
 ## gradle
 ```
 
-compile 'com.gengqiquan:QQResult:0.0.3'
+compile 'com.gengqiquan:QQResult:0.0.5'
 
 ```
 
@@ -75,5 +75,5 @@ kotlin
 ```
 ## gradle
 ```
-compile 'com.gengqiquan:result-adapter-rxjava:0.0.3'
+compile 'com.gengqiquan:result-adapter-rxjava:0.0.5'
 ```
